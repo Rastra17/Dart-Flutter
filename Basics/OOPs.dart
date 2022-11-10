@@ -25,6 +25,10 @@ class Shape {
   }
 }
 
+// abstract class Shape() { // This is an abstract class of empty method ideas
+//   void area();
+// }
+
 class Triangle extends Shape {
   Triangle(int side1, int side2) : super(side1, side2);
 
