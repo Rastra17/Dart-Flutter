@@ -1,16 +1,27 @@
 import "dart:io";
 
-class Shape { // _ in Dart is to tell the compiler that it is a private access modifier
+class Shape {
+  // _ in Dart is to tell the compiler that it is a private access modifier
   int _side1 = 0;
   int _side2 = 0;
 
-  Shape(int side1, int side2) { // Parent values will be passed down to children
+  Shape(int side1, int side2) {
+    // Parent values will be passed down to children
     this._side1 = side1;
     this._side2 = side2;
   }
 
   void area() {
     print("This is the parent class which will be overridden.");
+  }
+
+  void SetValues(int side1, int side2) { // Setter (not being used)
+    this._side1 = side1;
+    this._side2 = side2;
+  } // These values are constructed outside the constructor to encapsulate
+
+  List<int> GetValues() { // Getter (not being used)
+    return [this._side1, this._side2];
   }
 }
 
