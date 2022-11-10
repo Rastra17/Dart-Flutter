@@ -6,7 +6,7 @@ void main(List<String> args) {
 }
 
 int add(int first, int second, [int third = 0]) { //Optional Parameters
-  return first + second + third;
+  return first + second;
 }
 
 int sub({int? first, int? second}) {
