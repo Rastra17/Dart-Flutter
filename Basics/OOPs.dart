@@ -1,12 +1,12 @@
 import "dart:io";
 
-class Shape {
-  int side1 = 0;
-  int side2 = 0;
+class Shape { // _ in Dart is to tell the compiler that it is a private access modifier
+  int _side1 = 0;
+  int _side2 = 0;
 
   Shape(int side1, int side2) { // Parent values will be passed down to children
-    this.side1 = side1;
-    this.side2 = side2;
+    this._side1 = side1;
+    this._side2 = side2;
   }
 
   void area() {
@@ -19,7 +19,7 @@ class Triangle extends Shape {
 
   @override
   void area() {
-    print("Area of triangle: ${0.5 * (side1 * side2)}");
+    print("Area of triangle: ${0.5 * (_side1 * _side2)}");
   }
 }
 
@@ -28,7 +28,7 @@ class Square extends Shape {
 
   @override
   void area() {
-    print("Area of square: ${side1 * side1}");
+    print("Area of square: ${_side1 * _side1}");
   }
 }
 
