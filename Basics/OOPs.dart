@@ -18,7 +18,7 @@ class Shape {
   void SetValues(int side1, int side2) { // Setter (not being used)
     this._side1 = side1;
     this._side2 = side2;
-  } // These values are constructed outside the constructor to encapsulate
+  } // These values are constructed outside the constructor to limit access
 
   List<int> GetValues() { // Getter (not being used)
     return [this._side1, this._side2];
