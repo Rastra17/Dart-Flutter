@@ -10,7 +10,7 @@ class Shape { // _ in Dart is to tell the compiler that it is a private access m
   }
 
   void area() {
-    print("This is the parent class");
+    print("This is the parent class which will be overridden.");
   }
 }
 
