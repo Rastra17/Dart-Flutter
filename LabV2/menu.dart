@@ -40,7 +40,7 @@ class Menu extends Transaction {
   @override
   void deposit(int moneyDeposited) {
     this._balance = this._balance + moneyDeposited;
-    print("${moneyDeposited} has been deposited to your account.");
+    print("\$${moneyDeposited} has been deposited to your account.");
   }
 
   @override
@@ -49,7 +49,7 @@ class Menu extends Transaction {
       print("You do not have enough balance in your account!");
     } else {
       this._balance = this._balance - moneyWithdrawn;
-      print("${moneyWithdrawn} has been withdrawn from your account.");
+      print("\$${moneyWithdrawn} has been withdrawn from your account.");
     }
   }
 }
@@ -82,7 +82,7 @@ void main(List<String> args) {
       print(object._UserData);
     } else if (choice == 2 && name != null) {
       int check = object.balanceCheck();
-      print("Your balance: $check");
+      print("Your balance: \$$check");
     } else if (choice == 3 && name != null) {
       stdout.write("How much are you depositing: ");
       int moneyDeposited = int.parse(stdin.readLineSync()!);
