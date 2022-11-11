@@ -62,6 +62,8 @@ void main(List<String> args) {
   Menu object = Menu();
 
   while (true) {
+    sleep(new Duration(seconds: 3));
+
     print("");
     print("What do you want to do?");
     print("1. Create Account");
