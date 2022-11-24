@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'arithmetic.dart';
+import 'simpleInterest.dart';
 
 void main() {
   runApp(
-    const MaterialApp(debugShowCheckedModeBanner: false, home: MyWidget()),
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SimpleInterest(),
+    ),
   );
 }
 
