@@ -37,9 +37,11 @@ class ProblemPercentage implements CalculatePercentageInterface {
 void main(List<String> args) {
   ProblemPercentage object = ProblemPercentage();
 
-  stdout.write("Enter the file size: ");
+  stdout.write("Enter the file size in KB: ");
   double filesize = double.parse(stdin.readLineSync()!);
 
   object.setValues(filesize);
-  print("The Percentage needed to optimize file is: ${object.Percentage()}%");
+  dynamic result = object.Percentage();
+  result = result.floor();
+  print("The Percentage needed to optimize file is: $result%");
 }
