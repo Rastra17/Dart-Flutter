@@ -17,7 +17,7 @@ class ProblemPercentage implements CalculatePercentageInterface {
   double _percentage = 0.0;
 
   ProblemPercentage() {
-    print("Percentage Calculator");
+    print("/Percentage Calculator\\");
   }
 
   @override
@@ -43,5 +43,11 @@ void main(List<String> args) {
   object.setValues(filesize);
   dynamic result = object.Percentage();
   result = result.floor();
-  print("The Percentage needed to optimize file is: $result%");
+
+  if (result < 1) {
+    print("Sorry! The file cannot be compressed to optimal size.");
+  }
+  else {
+    print("The Percentage needed to optimize the file is: $result%");
+  }
 }
