@@ -15,6 +15,7 @@ class ProblemPercentage implements CalculatePercentageInterface {
   double _filesize = 0.0;
   int _neededsize = 8192;
   double _percentage = 0.0;
+  final maxSize = 819200; // 800 MB
 
   ProblemPercentage() {
     print("/Percentage Calculator\\");
@@ -46,8 +47,7 @@ void main(List<String> args) {
 
   if (result < 1) {
     print("Sorry! The file cannot be compressed to optimal size.");
-  }
-  else {
+  } else {
     print("The Percentage needed to optimize the file is: $result%");
   }
 }
