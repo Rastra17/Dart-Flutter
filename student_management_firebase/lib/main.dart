@@ -10,7 +10,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
-      initialRoute: '/simpleInterest',
+      initialRoute: '/',
       routes: {
         '/': (context) => const Arithmetic(),
         '/arithOutputScreen': (context) => const ArithmeticOutputScreen(),

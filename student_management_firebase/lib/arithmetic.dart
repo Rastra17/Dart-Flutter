@@ -8,8 +8,10 @@ class Arithmetic extends StatefulWidget {
 }
 
 class _ArithmeticState extends State<Arithmetic> {
+  String? choice;
   int result = 0;
-  final _firstController = TextEditingController();
+  final _firstController =
+      TextEditingController(); //Reads changes in text field
   final _secondController = TextEditingController();
 
   final _globalKey = GlobalKey<FormState>();
@@ -18,6 +20,24 @@ class _ArithmeticState extends State<Arithmetic> {
     setState(() {
       result =
           int.parse(_firstController.text) + int.parse(_secondController.text);
+    });
+    Navigator.pushNamed(context, '/arithOutputScreen',
+        arguments:
+            result); //This method redirects and also pushes values to other routes
+  }
+
+  void _substract() {
+    setState(() {
+      result =
+          int.parse(_firstController.text) - int.parse(_secondController.text);
+    });
+    Navigator.pushNamed(context, '/arithOutputScreen', arguments: result);
+  }
+
+  void _multiply() {
+    setState(() {
+      result =
+          int.parse(_firstController.text) * int.parse(_secondController.text);
     });
     Navigator.pushNamed(context, '/arithOutputScreen', arguments: result);
   }
@@ -72,7 +92,37 @@ class _ArithmeticState extends State<Arithmetic> {
                 },
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
+              ),
+              RadioListTile(
+                title: const Text("Add"),
+                value: "add",
+                groupValue: choice,
+                onChanged: (value) {
+                  setState(() {
+                    choice = value.toString();
+                  });
+                },
+              ),
+              RadioListTile(
+                title: const Text("Substract"),
+                value: "substract",
+                groupValue: choice,
+                onChanged: (value) {
+                  setState(() {
+                    choice = value.toString();
+                  });
+                },
+              ),
+              RadioListTile(
+                title: const Text("Multiply"),
+                value: "multiply",
+                groupValue: choice,
+                onChanged: (value) {
+                  setState(() {
+                    choice = value.toString();
+                  });
+                },
               ),
               SizedBox(
                 width: double.infinity,
@@ -83,26 +133,25 @@ class _ArithmeticState extends State<Arithmetic> {
                   ),
                   onPressed: () {
                     if (_globalKey.currentState!.validate()) {
-                      _add();
+                      if (choice == "add") {
+                        _add();
+                      } else if (choice == "substract") {
+                        _substract();
+                      } else if (choice == "multiply") {
+                        _multiply();
+                      } else {
+                        print("Khichha");
+                      }
                     }
                   },
                   child: const Text(
-                    'Add',
+                    'Calculate',
                     style: TextStyle(
                       fontSize: 18,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 8,
-              ),
-              // Text(
-              //   'Result: $result',
-              //   style: const TextStyle(
-              //     fontSize: 16,
-              //   ),
-              // ),
             ],
           ),
         ),
