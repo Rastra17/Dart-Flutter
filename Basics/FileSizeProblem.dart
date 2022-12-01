@@ -15,7 +15,7 @@ class ProblemPercentage implements CalculatePercentageInterface {
   double _filesize = 0.0;
   int _neededsize = 8192;
   double _percentage = 0.0;
-  final maxSize = 819200; // 800 MB
+  final maxSize = 819200; // 800 MB in size
 
   ProblemPercentage() {
     print("/Percentage Calculator\\");

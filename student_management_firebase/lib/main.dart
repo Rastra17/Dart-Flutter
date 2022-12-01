@@ -1,46 +1,32 @@
-import 'package:flutter/material.dart';
-import 'arithmetic.dart';
 import 'simpleInterest.dart';
+import 'arithmeticOutput.dart';
+import 'arithmetic.dart';
+import 'package:flutter/material.dart';
+import 'columnScreen.dart';
+import 'listTileScreen.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SimpleInterest(),
+      title: 'Flutter App',
+      initialRoute: '/simpleInterest',
+      routes: {
+        '/': (context) => const Arithmetic(),
+        '/arithOutputScreen': (context) => const ArithmeticOutputScreen(),
+        '/simpleInterest': (context) => const SimpleInterest(),
+        '/columnScreen': (context) => const ColumnScreen(),
+        '/listTile': (context) => const ListTileScreen(),
+      },
     ),
   );
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class MyScreen extends StatelessWidget {
+  const MyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("App"),
-        backgroundColor: Colors.black,
-        elevation: 0,
-      ),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.red),
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.green),
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            ),
-            labelText: "Enter Name",
-          ),
-        ),
-      ),
-    );
+    return Container();
   }
 }
