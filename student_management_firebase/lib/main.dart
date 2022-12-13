@@ -7,13 +7,14 @@ import 'listTileScreen.dart';
 import 'safearea.dart';
 import 'imageScreen.dart';
 import 'studentDetails.dart';
+import 'cardScreen.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
-      initialRoute: '/student',
+      initialRoute: '/card',
       routes: {
         '/': (context) => const Arithmetic(),
         '/arithOutputScreen': (context) => const ArithmeticOutputScreen(),
@@ -23,6 +24,7 @@ void main() {
         '/safearea': (context) => const NewProgram(),
         '/imageScreen': (context) => const ImageScreen(),
         '/student': (context) => const StudentDetailStateScreen(),
+        '/card': (context) => const cardScreen(),
       },
     ),
   );
