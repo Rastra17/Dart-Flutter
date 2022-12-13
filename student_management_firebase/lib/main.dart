@@ -1,3 +1,6 @@
+import 'package:student_management_firebase/screen/gridScreen.dart';
+import 'package:student_management_firebase/screen/calculatorApp.dart';
+
 import 'simpleInterest.dart';
 import 'arithmeticOutput.dart';
 import 'arithmetic.dart';
@@ -14,7 +17,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
-      initialRoute: '/card',
+      initialRoute: '/calc',
       routes: {
         '/': (context) => const Arithmetic(),
         '/arithOutputScreen': (context) => const ArithmeticOutputScreen(),
@@ -25,16 +28,9 @@ void main() {
         '/imageScreen': (context) => const ImageScreen(),
         '/student': (context) => const StudentDetailStateScreen(),
         '/card': (context) => const cardScreen(),
+        '/cardbutton': (context) => const GridScreen(),
+        '/calc': (context) => const CalculatorAppScreen(),
       },
     ),
   );
-}
-
-class MyScreen extends StatelessWidget {
-  const MyScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
 }

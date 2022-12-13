@@ -13,21 +13,23 @@ class _cardScreenState extends State<cardScreen> {
     return Scaffold(
       body: SafeArea(
         child: SizedBox(
-            height: 300,
-            width: double.infinity,
-            child: Card(
-                color: Colors.red,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15)),
-                child: const Center(
-                  child: Text(
-                    'This is a card',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ))),
+          height: 300,
+          width: double.infinity,
+          child: Card(
+            color: Colors.red,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            child: const Center(
+              child: Text(
+                'This is a card',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
