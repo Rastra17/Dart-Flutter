@@ -10,8 +10,6 @@ class CalculatorAppScreen extends StatefulWidget {
 class _CalculatorAppScreenState extends State<CalculatorAppScreen> {
   @override
   Widget build(BuildContext context) {
-    final InputController = TextEditingController();
-
     String output = '1';
     List<String> buttons = [
       "C",

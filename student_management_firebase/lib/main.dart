@@ -11,13 +11,15 @@ import 'safearea.dart';
 import 'imageScreen.dart';
 import 'studentDetails.dart';
 import 'cardScreen.dart';
+import 'package:student_management_firebase/screen/stackScreen.dart';
+import 'package:student_management_firebase/bottomscreens/Dashboard.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
-      initialRoute: '/calc',
+      initialRoute: '/nav',
       routes: {
         '/': (context) => const Arithmetic(),
         '/arithOutputScreen': (context) => const ArithmeticOutputScreen(),
@@ -30,6 +32,8 @@ void main() {
         '/card': (context) => const cardScreen(),
         '/cardbutton': (context) => const GridScreen(),
         '/calc': (context) => const CalculatorAppScreen(),
+        '/stack': (context) => const StackScreen(),
+        '/nav': (context) => const BottomNavigationScreen(),
       },
     ),
   );
