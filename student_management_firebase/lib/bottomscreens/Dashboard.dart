@@ -36,9 +36,11 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         onTap: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
+          setState(
+            () {
+              _selectedIndex = index;
+            },
+          );
         },
         items: const [
           BottomNavigationBarItem(
@@ -47,7 +49,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
-            label: 'Cateogries',
+            label: 'Categories',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.question_mark),
