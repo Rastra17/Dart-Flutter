@@ -5,7 +5,7 @@ class SplashScreen extends StatefulWidget {
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
-}q
+}
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
